@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/image_classification/mlruns/482009213213945345/19715f886fff49659b16e667d2071221/artifacts
+end_time: 1747350823596
+entry_point_name: ''
+experiment_id: '482009213213945345'
+lifecycle_stage: active
+run_id: 19715f886fff49659b16e667d2071221
+run_name: clean-swan-22
+run_uuid: 19715f886fff49659b16e667d2071221
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747350823564
+status: 3
+tags: []
+user_id: User

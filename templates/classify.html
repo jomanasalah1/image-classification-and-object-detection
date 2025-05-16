@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            padding: 40px;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Image Classification</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required><br>
+            <button class="btn" type="submit">Classify</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            Prediction: {{ prediction }}
+        </div>
+        {% endif %}
+
+        {% if image_url %}
+        <img src="/{{ image_url }}" alt="Uploaded Image">
+        {% endif %}
+
+        <a href="/">&#8592; Back to Home</a>
+    </div>
+</body>
+</html>

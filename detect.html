@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            padding: 40px;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        .btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1976D2;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Object Detection</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required><br>
+            <button class="btn" type="submit">Detect Objects</button>
+        </form>
+
+        {% if output_image %}
+        <img src="/output_image/{{ output_image }}" alt="Detected Image">
+        {% endif %}
+
+        <a href="/">&#8592; Back to Home</a>
+    </div>
+</body>
+</html>
