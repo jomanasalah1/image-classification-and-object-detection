@@ -8,7 +8,7 @@ Two deep learning computer vision projects in one repository: a **CNN that class
 
 | Project | Model | Result |
 |---|---|---|
-| CIFAR-10 classification | Custom CNN (BatchNorm + Dropout) | **XX.X% test accuracy** *75.8400022983551* |
+| CIFAR-10 classification | Custom CNN (BatchNorm + Dropout) | **75.8400022983551% test accuracy** |
 | Object detection | YOLOv3 (Darknet-53, pretrained COCO weights) | Detects the 80 COCO classes with bounding boxes |
 
 Training curves and sample predictions:
