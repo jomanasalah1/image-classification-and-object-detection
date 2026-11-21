@@ -90,7 +90,3 @@ To view the MLflow experiment dashboard:
 mlflow ui
 ```
 
-
-## Author
-
-**Your Name** — add your LinkedIn link here
